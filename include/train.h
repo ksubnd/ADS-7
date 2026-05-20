@@ -11,7 +11,12 @@ class Train {
   };
   int countOp; // счетчик шагов (число переходов из вагона в вагон)
   Car *first; // точка входа в поезд (первый вагон)
-
+  Car* createCar(bool light) {
+    Car* temp = new Car;
+    temp->light = light;
+    temp->prev = temp->next = nullptr;
+    return temp;
+  }
  public:
   Train();
   void addCar(bool light); // добавить вагон с начальным состоянием лампочки
