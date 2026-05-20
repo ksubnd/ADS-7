@@ -18,7 +18,7 @@ void Train::addCar(bool light) {
 
 int Train::getLength() {
     first->light = true;
-    Car* temp = first->next;
+    const Car* temp = first->next;
     int count = 1;
     while (temp != first) {
         if (temp->light == true) {
